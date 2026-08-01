@@ -21,20 +21,21 @@
 # SOFTWARE.
 
 # Code author: GiveMeAllYourCats
-# Repo: https://github.com/michaeldegroot/cats-blender-plugin
-# Edits by: GiveMeAllYourCats, Hotox
+# Original repo: https://github.com/absolute-quantum/cats-blender-plugin
+# Maintained fork (Blender 5.2): https://github.com/051jeferson/cats-blender-plugin
+# Edits by: GiveMeAllYourCats, Hotox, 051jeferson
 
 bl_info = {
-    'name': 'Cats Blender Plugin',
+    'name': 'Cats Blender Plugin (5.2)',
     'category': '3D View',
-    'author': 'GiveMeAllYourCats & Hotox',
+    'author': 'GiveMeAllYourCats, Hotox & 051jeferson',
     'location': 'View 3D > Tool Shelf > CATS',
-    'description': 'A tool designed to shorten steps needed to import and optimize models into VRChat',
-    'version': (0, 19, 0),  # Has to be (x, x, x) not [x, x, x]!! Only change this version and the dev branch var right before publishing the new update!
+    'description': 'CATS for VRChat model import/optimization — community fork updated for Blender 5.2 (based on 0.19.0)',
+    'version': (0, 20, 0),  # Fork version: 0.20.0 = 0.19.0 upstream + Blender 4.x/5.2 compatibility
     'blender': (2, 80, 0),
-    'wiki_url': 'https://github.com/michaeldegroot/cats-blender-plugin',
-    'tracker_url': 'https://github.com/michaeldegroot/cats-blender-plugin/issues',
-    'warning': '',
+    'wiki_url': 'https://github.com/051jeferson/cats-blender-plugin',
+    'tracker_url': 'https://github.com/051jeferson/cats-blender-plugin/issues',
+    'warning': 'Community fork for Blender 5.2 — not the official absolute-quantum release',
 }
 dev_branch = False
 
