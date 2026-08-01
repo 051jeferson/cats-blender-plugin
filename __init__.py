@@ -316,7 +316,8 @@ def register():
     else:
         pass  # From 2.83 on this is no longer needed
     tools.common.get_user_preferences().filepaths.use_file_compression = True
-    bpy.context.window_manager.addon_support = {'OFFICIAL', 'COMMUNITY', 'TESTING'}
+    # Blender 4.2+ removed 'TESTING' from addon_support (only OFFICIAL, COMMUNITY remain)
+    bpy.context.window_manager.addon_support = {'OFFICIAL', 'COMMUNITY'}
 
     # Add shapekey button to shapekey menu
     if hasattr(bpy.types, 'MESH_MT_shape_key_specials'):  # pre 2.80
@@ -338,6 +339,9 @@ def register():
 
 def unregister():
     print("### Unloading CATS...")
+
+    tools.settings.stop_apply_settings_timer()
+    tools.supporter.stop_update_timer()
 
     # Unregister updater
     updater.unregister()
